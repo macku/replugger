@@ -15,6 +15,16 @@
     ["transform-es2015-modules-commonjs-simple", {
       "noMangle": true
     }],
-    "lodash"
+    "lodash",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "components": "./src/components",
+        "constants": "./src/constants",
+        "container": "./src/container",
+        "helpers": "./src/helpers",
+        "services": "./src/services"
+      }
+    }]
   ]
 }

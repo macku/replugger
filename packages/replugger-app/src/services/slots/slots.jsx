@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { isValidElement } from 'react';
+import Aux from 'components/Aux/Aux';
 
 const slots = new Map();
 
 const EmptyComponent = () => null;
-const empySlot = new Set([EmptyComponent]);
-
-const AuxComponent = ({ children }) => children;
+const emptySlot = new Set([EmptyComponent]);
 
 export function addToSlot(slotName, component) {
+  if (!isValidElement(component)) {
+    throw new TypeError('Given component must be a valid React element');
+  }
+
   const slot = slots.has(slotName) ? slots.get(slotName) : new Set();
 
   slot.add(component);
@@ -15,16 +18,25 @@ export function addToSlot(slotName, component) {
   slots.set(slotName, slot);
 }
 
-export function renderSlot(slotName) {
-  const slot = slots.has(slotName) ? slots.get(slotName) : empySlot;
+export function renderSlot(slotName, childrenWrapper = null) {
+  const slot = slots.has(slotName) ? slots.get(slotName) : emptySlot;
 
   const components = [];
 
-  slot.forEach(component => components.push(component));
+  slot.forEach((rawComponent) => {
+    let component = rawComponent;
+    const useWrapper = Boolean(childrenWrapper);
+
+    if (useWrapper && (isValidElement(childrenWrapper) || typeof childrenWrapper === 'function')) {
+      component = childrenWrapper({ children: rawComponent });
+    }
+
+    components.push(component);
+  });
 
   return (
-    <AuxComponent>
+    <Aux>
       {components}
-    </AuxComponent>
+    </Aux>
   );
 }

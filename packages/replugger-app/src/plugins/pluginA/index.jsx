@@ -2,10 +2,10 @@ import React from 'react';
 
 import Link from 'components/Link/Link';
 import { addToSlot } from 'services/slots/slots';
+import { MENU } from 'constants/slot';
 
-addToSlot('menu', () => (
+addToSlot(MENU, (
   <Link href="https://wp.pl">
     Wp
   </Link>
 ));
-

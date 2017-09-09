@@ -39,7 +39,11 @@ const webpackConfig = {
       PATHS.MODULES
     ],
     alias: {
-      components: path.resolve(PATHS.SRC, 'components')
+      components: path.resolve(PATHS.SRC, 'components'),
+      constants: path.resolve(PATHS.SRC, 'constants'),
+      containers: path.resolve(PATHS.SRC, 'containers'),
+      helpers: path.resolve(PATHS.SRC, 'helpers'),
+      services: path.resolve(PATHS.SRC, 'services')
     }
   },
 
@@ -128,7 +132,8 @@ const webpackConfig = {
               loader: 'less-loader',
               options: {
                 strictMath: true,
-                sourceMap: true
+                sourceMap: true,
+                modules: true
               }
             }
           ]
@@ -273,4 +278,4 @@ if (ENV === 'development') {
   webpackConfig.devtool = 'source-map';
 }
 
-module.exports = webpackConfig;
+module.exports = webpackConfig
