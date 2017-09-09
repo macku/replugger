@@ -70,8 +70,7 @@ module.exports = {
           '.json',
           '.less',
           '.css'
-        ],
-        webpackConfigPath: 'webpack.config.js'
+        ]
       }
     ],
     'no-debugger': ['error'],

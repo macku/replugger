@@ -1,1 +1,5 @@
 export const MY_SLOT = 'MY_SLOT';
+export const FOOTER = 'FOOTER';
+export const EXTERNAL_NAVIGATION_MENU = 'EXTERNAL_NAVIGATION_MENU';
+export const NAVIGATION_MENU = 'NAVIGATION_MENU';
+

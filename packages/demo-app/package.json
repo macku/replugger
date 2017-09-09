@@ -21,7 +21,9 @@
     "react-router": "4.2.0",
     "react-router-config": "1.0.0-beta.4",
     "react-router-dom": "4.2.2",
-    "replugger": "*"
+    "replugger": "*",
+    "replugger-demo-plugin-bar": "*",
+    "replugger-demo-plugin-foo": "*"
   },
   "devDependencies": {
     "babel-core": "6.26.0",

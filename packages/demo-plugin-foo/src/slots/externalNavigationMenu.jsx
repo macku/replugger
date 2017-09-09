@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react';
 import { slot, renderTo } from 'replugger';
 
-import { EXTERNAL_NAVIGATION_MENU } from 'constants/slot';
-import Link from 'components/Link/Link';
+import Link from '../../../demo-app/src/components/Link/Link';
+
+import { EXTERNAL_NAVIGATION_MENU } from '../constants/slots';
 
 @slot
 class Slot extends PureComponent {

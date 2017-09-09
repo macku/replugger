@@ -283,4 +283,4 @@ if (ENV === 'development') {
   webpackConfig.devtool = 'source-map';
 }
 
-module.exports = webpackConfig
+module.exports = webpackConfig;

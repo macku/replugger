@@ -1,2 +1,2 @@
-import '../../../demo-plugin-bar/src';
-import '../../../demo-plugin-foo/src';
+import 'replugger-demo-plugin-bar';
+import 'replugger-demo-plugin-foo';
