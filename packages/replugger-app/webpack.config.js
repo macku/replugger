@@ -42,6 +42,7 @@ const webpackConfig = {
       components: path.resolve(PATHS.SRC, 'components'),
       constants: path.resolve(PATHS.SRC, 'constants'),
       containers: path.resolve(PATHS.SRC, 'containers'),
+      decorators: path.resolve(PATHS.SRC, 'decorators'),
       helpers: path.resolve(PATHS.SRC, 'helpers'),
       pages: path.resolve(PATHS.SRC, 'pages'),
       services: path.resolve(PATHS.SRC, 'services')

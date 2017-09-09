@@ -7,7 +7,7 @@ import { EXTERNAL_NAVIGATION_MENU, FOOTER } from 'constants/slot';
 const MY_SLOT = 'MY_SLOT';
 
 addToSlot(EXTERNAL_NAVIGATION_MENU, () => (
-  <Link href="https://wp.pl">
+  <Link href="https://wp.pl" target="_blank">
     Wp
   </Link>
 ));
@@ -15,6 +15,9 @@ addToSlot(EXTERNAL_NAVIGATION_MENU, () => (
 addToSlot(FOOTER, () => (
   <div>
     <p>Copyright by Maciej Adamczak</p>
-    { renderSlot(MY_SLOT) }
+    <div style={{ border: '2px dotted red' }}>
+      <span>{'The slot named "MY_SLOT" was created by Plugin A.'}</span>
+      { renderSlot(MY_SLOT) }
+    </div>
   </div>
 ));

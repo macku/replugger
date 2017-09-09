@@ -3,25 +3,26 @@ import { Route } from 'react-router-dom';
 
 const routes = new Map();
 
-export function addRoute(route, path, component, exact = false) {
-  // TODO: Should we check path instead?
-  if (routes.has(route)) {
-    throw new TypeError(`Given route "${route}" should be unique but it's already used.`);
+// TODO: Use object attribute
+export function addComponentRoute(routeId, uri, component, exact = false) {
+  // TODO: Should we check uri instead of the routeId?
+  if (routes.has(routeId)) {
+    throw new TypeError(`Given route "${routeId}" should be unique but it's already used.`);
   }
 
-  routes.set(route, { route, path, exact, component });
+  routes.set(routeId, { uri, component, exact });
 }
 
 export function getRoutesComponents() {
   const components = [];
 
-  routes.forEach(({ route, path, exact, component }) => {
+  routes.forEach(({ uri, component, exact }, routeId) => {
     components.push(
       <Route
-        key={route.toString()}
-        path={path}
-        exact={exact}
+        key={routeId.toString()}
+        path={uri}
         component={component}
+        exact={exact}
       />
     );
   });
