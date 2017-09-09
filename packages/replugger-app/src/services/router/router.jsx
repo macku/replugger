@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
 
 const routes = new Map();
 
@@ -13,12 +12,12 @@ export function addComponentRoute(routeId, uri, component, exact = false) {
   routes.set(routeId, { uri, component, exact });
 }
 
-export function getRoutesComponents() {
+export function getRoutesComponents(Component) {
   const components = [];
 
   routes.forEach(({ uri, component, exact }, routeId) => {
     components.push(
-      <Route
+      <Component
         key={routeId.toString()}
         path={uri}
         component={component}

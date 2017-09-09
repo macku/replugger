@@ -1,20 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import App from 'containers/App/Layout';
+import Layout from 'containers/Layout/Layout';
 import { getRoutesComponents } from 'services/router/router';
+
 import 'pages';
 
-const AppRouter = () => {
-  const routes = getRoutesComponents();
+// eslint-disable-next-line react/prefer-stateless-function
+class AppRouter extends PureComponent {
+  render() {
+    const routes = getRoutesComponents(Route);
 
-  return (
-    <Router>
-      <App>
-        {routes}
-      </App>
-    </Router>
-  );
-};
+    return (
+      <Router>
+        <Layout>
+          {routes}
+        </Layout>
+      </Router>
+    );
+  }
+}
 
 export default AppRouter;
