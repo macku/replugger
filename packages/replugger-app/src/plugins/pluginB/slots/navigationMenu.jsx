@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-
-import { slot, renderTo } from 'decorators/slot-decorator';
+import { slot, renderTo } from 'replugger';
 
 import { NAVIGATION_MENU } from 'constants/slot';
 import Link from 'components/Link/Link';

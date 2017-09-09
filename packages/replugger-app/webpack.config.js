@@ -86,7 +86,10 @@ const webpackConfig = {
 
       {
         test: /\.jsx?$/,
-        include: PATHS.SRC,
+        include: [
+          PATHS.SRC,
+          ...PATHS.LINKED_MODULES
+        ],
         use: [
           {
             loader: 'react-hot-loader/webpack'

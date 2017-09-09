@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-
-import Aux from 'components/Aux/Aux';
+import { Aux } from 'replugger';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class NoMatch extends PureComponent {

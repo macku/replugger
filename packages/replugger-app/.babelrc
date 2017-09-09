@@ -9,14 +9,11 @@
     "react"
   ],
   "plugins": [
-    "syntax-dynamic-import",
     "transform-object-rest-spread",
-    "transform-class-properties",
     "transform-decorators-legacy",
     ["transform-es2015-modules-commonjs-simple", {
       "noMangle": true
     }],
-    "lodash",
     ["module-resolver", {
       "root": ["./src"],
       "alias": {

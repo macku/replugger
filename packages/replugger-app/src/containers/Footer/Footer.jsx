@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
+import { renderSlot } from 'replugger';
 
-import { renderSlot } from 'services/slots/slots';
 import { FOOTER } from 'constants/slot';
 
 // eslint-disable-next-line react/prefer-stateless-function

@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
+import { renderSlot } from 'replugger';
 
-import { renderSlot } from 'services/slots/slots';
 import { EXTERNAL_NAVIGATION_MENU, NAVIGATION_MENU } from 'constants/slot';
-
 import LinkWrapper from 'components/LinkWrapper/LinkWrapper';
 
 import styles from './Navigation.less';

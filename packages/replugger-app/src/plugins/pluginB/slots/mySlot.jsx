@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-
-import { slot, renderTo } from 'decorators/slot-decorator';
+import { slot, renderTo } from 'replugger';
 
 import { MY_SLOT } from '../constants/slots';
 

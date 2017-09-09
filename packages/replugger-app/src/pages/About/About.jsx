@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-
-import route from 'decorators/route-decorator';
-import Aux from 'components/Aux/Aux';
+import { Aux, route } from 'replugger';
 
 import { ABOUT_PAGE } from '../../constants/routes';
 

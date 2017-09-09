@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { getRoutesComponents } from 'replugger';
 
 import Layout from 'containers/Layout/Layout';
-import { getRoutesComponents } from 'services/router/router';
 
 import 'pages';
 import NoMatch from 'pages/NoMatch/NoMatch';
