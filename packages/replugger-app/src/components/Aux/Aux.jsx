@@ -6,10 +6,7 @@ const AuxComponent = ({ children }) => (
 );
 
 AuxComponent.propTypes = {
-  children: PropTypes.oneOf([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]).isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default AuxComponent;

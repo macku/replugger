@@ -1,17 +1,20 @@
 import React, { isValidElement } from 'react';
+
 import Aux from 'components/Aux/Aux';
 
 const slots = new Map();
 
+const createEmptySlot = (...args) => (new Set(...args));
+
 const EmptyComponent = () => null;
-const emptySlot = new Set([EmptyComponent]);
+const emptySlot = createEmptySlot([EmptyComponent]);
 
 export function addToSlot(slotName, component) {
-  if (!isValidElement(component)) {
-    throw new TypeError('Given component must be a valid React element');
+  if (typeof component !== 'function') {
+    throw new TypeError('Given component must be a valid callback');
   }
 
-  const slot = slots.has(slotName) ? slots.get(slotName) : new Set();
+  const slot = slots.has(slotName) ? slots.get(slotName) : createEmptySlot();
 
   slot.add(component);
 
@@ -23,12 +26,17 @@ export function renderSlot(slotName, childrenWrapper = null) {
 
   const components = [];
 
-  slot.forEach((rawComponent) => {
-    let component = rawComponent;
+  slot.forEach((componentFactory) => {
+    let component = componentFactory();
+
+    if (!isValidElement(component)) {
+      throw new TypeError('Given component must be a valid React element');
+    }
+
     const useWrapper = Boolean(childrenWrapper);
 
     if (useWrapper && (isValidElement(childrenWrapper) || typeof childrenWrapper === 'function')) {
-      component = childrenWrapper({ children: rawComponent });
+      component = childrenWrapper({ children: component });
     }
 
     components.push(component);

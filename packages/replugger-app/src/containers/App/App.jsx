@@ -1,24 +1,29 @@
 import React from 'react';
 
 import { renderSlot } from 'services/slots/slots';
-import { MENU } from 'constants/slot';
+import { MENU, FOOTER } from 'constants/slot';
 import LinkWrapper from 'components/LinkWrapper/LinkWrapper';
+import Aux from 'components/Aux/Aux';
 
 import styles from './App.less';
 
 const App = () => (
-  <content className={styles.appWrapper}>
-    <aside className={styles.menu}>
+  <Aux>
+    <content className={styles.appWrapper}>
+      <aside className={styles.menu}>
       Menu
-      <ul className={styles.menuLinks}>
-        { renderSlot(MENU, LinkWrapper) }
-      </ul>
-    </aside>
+        <ul className={styles.menuLinks}>
+          { renderSlot(MENU, LinkWrapper) }
+        </ul>
+      </aside>
 
-    <main className={styles.content}>
-      <h1>Hello World</h1>
-    </main>
-  </content>
+      <main className={styles.content}>
+        <h1>Hello World</h1>
+      </main>
+    </content>
+
+    { renderSlot(FOOTER) }
+  </Aux>
 );
 
 export default App;
