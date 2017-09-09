@@ -1,0 +1,33 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      },
+      "modules": false
+    }],
+    "react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    ["transform-es2015-modules-commonjs-simple", {
+      "noMangle": true
+    }],
+    "lodash",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "components": "./src/components",
+        "constants": "./src/constants",
+        "container": "./src/container",
+        "decorators": "./src/decorators",
+        "helpers": "./src/helpers",
+        "pages": "./src/pages",
+        "services": "./src/services"
+      }
+    }]
+  ]
+}
