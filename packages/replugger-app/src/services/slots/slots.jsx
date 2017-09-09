@@ -1,4 +1,4 @@
-import React, { isValidElement } from 'react';
+import React, { Component, PureComponent, isValidElement } from 'react';
 
 import Aux from 'components/Aux/Aux';
 
@@ -9,29 +9,47 @@ const createEmptySlot = (...args) => (new Set(...args));
 const EmptyComponent = () => null;
 const emptySlot = createEmptySlot([EmptyComponent]);
 
-export function addToSlot(slotName, component) {
+export function addToSlot(slotId, component) {
   if (typeof component !== 'function') {
     throw new TypeError('Given component must be a valid callback');
   }
 
-  const slot = slots.has(slotName) ? slots.get(slotName) : createEmptySlot();
+  const slot = slots.has(slotId) ? slots.get(slotId) : createEmptySlot();
+
+  console.debug(`Slots: Adding new component to slot "${slotId.toString()}"`);
 
   slot.add(component);
 
-  slots.set(slotName, slot);
+  slots.set(slotId, slot);
 }
 
-export function renderSlot(slotName, childrenWrapper = null) {
-  const slot = slots.has(slotName) ? slots.get(slotName) : emptySlot;
+const isValidReactComponent = (componentFactory) => {
+  const component = componentFactory();
+
+  const isComponentInstance = Component.isPrototypeOf(component);
+  const isPureComponentInstance = PureComponent.isPrototypeOf(component);
+  const isComponentValidElement = isValidElement(component);
+  const isEmptyComponent = componentFactory === EmptyComponent;
+
+  return (
+    isComponentInstance ||
+    isPureComponentInstance ||
+    isComponentValidElement ||
+    isEmptyComponent
+  );
+};
+
+export function renderSlot(slotId, childrenWrapper = null) {
+  const slot = slots.has(slotId) ? slots.get(slotId) : emptySlot;
 
   const components = [];
 
   slot.forEach((componentFactory) => {
-    let component = componentFactory();
-
-    if (!isValidElement(component) && componentFactory !== EmptyComponent) {
+    if (!isValidReactComponent(componentFactory)) {
       throw new TypeError('Given component must be a valid React element');
     }
+
+    let component = componentFactory();
 
     const useWrapper = Boolean(childrenWrapper);
 
@@ -41,6 +59,8 @@ export function renderSlot(slotName, childrenWrapper = null) {
 
     components.push(component);
   });
+
+  console.debug(`Slots: Rendering slot "${slotId.toString()}" with ${components.length} components in total`);
 
   return (
     <Aux>

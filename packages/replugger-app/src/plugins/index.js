@@ -1,2 +1,2 @@
-import './pluginA/index';
-import './pluginB/index';
+import './pluginA';
+import './pluginB';
