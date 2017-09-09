@@ -2,9 +2,9 @@ import React from 'react';
 
 import Link from 'components/Link/Link';
 import { addToSlot } from 'services/slots/slots';
-import { MENU, MY_SLOT } from 'constants/slot';
+import { EXTERNAL_NAVIGATION_MENU, MY_SLOT } from 'constants/slot';
 
-addToSlot(MENU, () => (
+addToSlot(EXTERNAL_NAVIGATION_MENU, () => (
   <Link href="https://google.com">
     Google
   </Link>

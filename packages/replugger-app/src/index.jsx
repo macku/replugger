@@ -2,14 +2,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import App from './containers/App/App';
+import Router from './containers/Router/Router';
 
 import './plugins';
 
 const renderApp = (Routes, moundId = 'root') => {
   render(
     <AppContainer>
-      <App />
+      <Router />
     </AppContainer>,
     document.getElementById(moundId)
   );

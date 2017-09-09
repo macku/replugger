@@ -29,7 +29,7 @@ export function renderSlot(slotName, childrenWrapper = null) {
   slot.forEach((componentFactory) => {
     let component = componentFactory();
 
-    if (!isValidElement(component)) {
+    if (!isValidElement(component) && componentFactory !== EmptyComponent) {
       throw new TypeError('Given component must be a valid React element');
     }
 

@@ -23,6 +23,7 @@
         "constants": "./src/constants",
         "container": "./src/container",
         "helpers": "./src/helpers",
+        "pages": "./src/pages",
         "services": "./src/services"
       }
     }]

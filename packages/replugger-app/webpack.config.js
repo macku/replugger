@@ -22,7 +22,7 @@ const webpackConfig = {
     ],
 
     vendor: [
-      'react', 'react-dom'
+      'react', 'react-dom', 'react-router', 'react-router-dom', 'react-router-config'
     ]
   },
 
@@ -43,6 +43,7 @@ const webpackConfig = {
       constants: path.resolve(PATHS.SRC, 'constants'),
       containers: path.resolve(PATHS.SRC, 'containers'),
       helpers: path.resolve(PATHS.SRC, 'helpers'),
+      pages: path.resolve(PATHS.SRC, 'pages'),
       services: path.resolve(PATHS.SRC, 'services')
     }
   },
