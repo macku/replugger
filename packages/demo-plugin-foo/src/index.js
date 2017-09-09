@@ -1,4 +1,4 @@
-import './pages';
+import './pages/index';
 import './slots';
 
 // TODO: expose services by export?
