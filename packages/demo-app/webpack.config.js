@@ -86,6 +86,7 @@ const webpackConfig = {
 
       {
         test: /\.jsx?$/,
+        exclude: [...PATHS.EXCLUDED_MODULES],
         include: [
           PATHS.SRC,
           ...PATHS.LINKED_MODULES

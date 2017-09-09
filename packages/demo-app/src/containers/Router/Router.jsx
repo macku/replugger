@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { getRoutesComponents } from 'replugger';
 
 import Layout from 'containers/Layout/Layout';
+import NoMatch from 'pages/NoMatch/NoMatch';
 
 import 'pages';
-import NoMatch from 'pages/NoMatch/NoMatch';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class AppRouter extends PureComponent {

@@ -8,7 +8,7 @@ class Slot extends PureComponent {
   @renderTo(MY_SLOT)
   render() {
     return (
-      <span>{'Plugin B can populate to "MY_SLOT"'}</span>
+      <span>{'Plugin "Foo" can populate to "MY_SLOT"'}</span>
     );
   }
 }

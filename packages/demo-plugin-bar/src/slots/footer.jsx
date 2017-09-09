@@ -11,7 +11,7 @@ class Slot extends PureComponent {
       <div>
         <p>Copyright by <strong>replugger</strong></p>
         <div style={{ border: '2px dotted red' }}>
-          <span>{'The slot named "MY_SLOT" was created by Plugin A.'}</span>
+          <span>{'The slot named "MY_SLOT" was created by Plugin "Bar"'}</span>
           { renderSlot(MY_SLOT) }
         </div>
       </div>

@@ -1,12 +1,12 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:require-path-exists/recommended'],
+  extends: ['airbnb'],
   env: {
     browser: true,
     es6: true,
     jest: true,
     node: true
   },
-  plugins: ['react', 'jsx-a11y', 'import', 'require-path-exists'],
+  plugins: ['react', 'jsx-a11y', 'import'],
   rules: {
     'comma-dangle': ['error', 'never'],
     radix: 'off',
@@ -60,19 +60,6 @@ module.exports = {
       }
     ],
     'import/newline-after-import': ['error'],
-    'require-path-exists/exists': [
-      'error',
-      {
-        extensions: [
-          '',
-          '.js',
-          '.jsx',
-          '.json',
-          '.less',
-          '.css'
-        ]
-      }
-    ],
     'no-debugger': ['error'],
     'no-alert': ['error'],
     'newline-after-var': ['error', 'always'],
