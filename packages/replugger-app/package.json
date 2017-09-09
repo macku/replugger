@@ -8,8 +8,8 @@
     "test": "NODE_ENV=test jest",
     "test:ci": "NODE_ENV=test jest --no-cache",
     "test:watch": "NODE_ENV=test jest --watch",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
+    "lint": "eslint --ext .js --ext .jsx src",
+    "lint:fix": "eslint --ext .js --ext .jsx src --fix",
     "dev:server": "webpack-dev-server"
   },
   "dependencies": {

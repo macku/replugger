@@ -70,7 +70,8 @@ module.exports = {
           '.json',
           '.less',
           '.css'
-        ]
+        ],
+        webpackConfigPath: 'webpack.config.js'
       }
     ],
     'no-debugger': ['error'],
@@ -87,6 +88,13 @@ module.exports = {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true
+    }
+  },
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: 'webpack.config.js'
+      }
     }
   }
 };

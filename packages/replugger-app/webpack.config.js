@@ -33,7 +33,14 @@ const webpackConfig = {
   },
 
   resolve: {
-    extensions: ['.js', '.json', '.jsx']
+    extensions: ['.js', '.json', '.jsx'],
+    modules: [
+      PATHS.SRC,
+      PATHS.MODULES
+    ],
+    alias: {
+      components: path.resolve(PATHS.SRC, 'components')
+    }
   },
 
   module: {
@@ -265,3 +272,5 @@ if (ENV === 'development') {
 } else {
   webpackConfig.devtool = 'source-map';
 }
+
+module.exports = webpackConfig;
