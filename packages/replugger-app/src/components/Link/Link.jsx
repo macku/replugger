@@ -1,26 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import styles from './Link.less';
 
-const Link = ({ href, children, className }) => (
-  <a
-    className={classnames(styles.link, className)}
-    href={href}
-  >
-    {children}
-  </a>
-);
+const LinkWrapper = ({ children, className, ...props }) => {
+  const Component = props.to ? Link : 'a';
 
-Link.propTypes = {
-  href: PropTypes.string.isRequired,
+  return (
+    <Component
+      className={classnames(styles.link, className)}
+      {...props}
+    >
+      {children}
+    </Component>
+  );
+};
+
+LinkWrapper.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string
 };
 
-Link.defaultProps = {
+LinkWrapper.defaultProps = {
+  to: null,
+  href: null,
   className: null
 };
 
-export default Link;
+export default LinkWrapper;

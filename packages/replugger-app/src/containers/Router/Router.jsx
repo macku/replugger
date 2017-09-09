@@ -1,21 +1,20 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from 'containers/App/Layout';
+import { getRoutesComponents } from 'services/router/router';
+import 'pages';
 
-import Dashboard from 'pages/Dashboard/Dashboard';
-import About from 'pages/About/About';
+const AppRouter = () => {
+  const routes = getRoutesComponents();
 
-const AppRouter = () => (
-  <Router>
-    <App>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/about" component={About} />
-    </App>
-  </Router>
-);
+  return (
+    <Router>
+      <App>
+        {routes}
+      </App>
+    </Router>
+  );
+};
 
 export default AppRouter;
