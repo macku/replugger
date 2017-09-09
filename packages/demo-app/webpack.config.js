@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const ENV = require('./env');
@@ -21,8 +20,12 @@ const webpackConfig = {
       `${PATHS.SRC}/index.jsx`
     ],
 
+    plugins: [
+      'replugger', 'replugger-demo-plugin-foo', 'replugger-demo-plugin-bar'
+    ],
+
     vendor: [
-      'react', 'react-dom', 'react-router', 'react-router-dom', 'react-router-config'
+      'react', 'react-dom', 'react-router-dom', 'react-router-config', 'classnames'
     ]
   },
 
@@ -232,7 +235,22 @@ const webpackConfig = {
       }
     },
 
-    new LodashModuleReplacementPlugin()
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: `${PATHS.SRC}/index.ejs`,
+      title: 'Replugger App',
+      appMountId: 'root',
+      xhtml: true,
+      mobile: true,
+      inject: false,
+      chunks: ['runtime', 'vendor', 'app'],
+      minify: {
+        useShortDoctype: true,
+        keepClosingSlash: true,
+        collapseWhitespace: true,
+        preserveLineBreaks: true
+      }
+    })
   ]
 };
 
@@ -255,24 +273,7 @@ if (ENV === 'development') {
   };
 
   webpackConfig.plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: `${PATHS.SRC}/index.ejs`,
-      title: 'Replugger App',
-      appMountId: 'root',
-      xhtml: true,
-      mobile: true,
-      inject: false,
-      chunks: ['runtime', 'vendor', 'app'],
-      minify: {
-        useShortDoctype: true,
-        keepClosingSlash: true,
-        collapseWhitespace: true,
-        preserveLineBreaks: true
-      }
-    })
+    new webpack.HotModuleReplacementPlugin()
   );
 
   Object.assign(webpackConfig.output, {
@@ -282,6 +283,10 @@ if (ENV === 'development') {
   webpackConfig.devtool = 'cheap-module-source-map';
 } else {
   webpackConfig.devtool = 'source-map';
+
+  webpackConfig.plugins.push(
+    new webpack.IgnorePlugin(/react-hot-loader/)
+  );
 }
 
 module.exports = webpackConfig;

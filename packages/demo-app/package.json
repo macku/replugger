@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run dev:server",
+    "build": "npm run clean && webpack",
+    "clean": "rm -rf dist/*",
     "test": "NODE_ENV=test jest",
     "test:ci": "NODE_ENV=test jest --no-cache",
     "test:watch": "NODE_ENV=test jest --watch",
