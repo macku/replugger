@@ -540,13 +540,6 @@ babel-plugin-jest-hoist@^21.0.2:
   version "21.0.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-21.0.2.tgz#cfdce5bca40d772a056cb8528ad159c7bb4bb03d"
 
-babel-plugin-lodash@3.2.11:
-  version "3.2.11"
-  resolved "https://registry.yarnpkg.com/babel-plugin-lodash/-/babel-plugin-lodash-3.2.11.tgz#21c8fdec9fe1835efaa737873e3902bdd66d5701"
-  dependencies:
-    glob "^7.1.1"
-    lodash "^4.17.2"
-
 babel-plugin-module-resolver@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-2.7.1.tgz#18be3c42ddf59f7a456c9e0512cd91394f6e4be1"
@@ -559,17 +552,9 @@ babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
 
-babel-plugin-syntax-class-properties@^6.8.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-class-properties/-/babel-plugin-syntax-class-properties-6.13.0.tgz#d7eb23b79a317f8543962c505b827c7d6cac27de"
-
 babel-plugin-syntax-decorators@^6.1.18, babel-plugin-syntax-decorators@^6.13.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-decorators/-/babel-plugin-syntax-decorators-6.13.0.tgz#312563b4dbde3cc806cee3e416cceeaddd11ac0b"
-
-babel-plugin-syntax-dynamic-import@6.18.0:
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
 
 babel-plugin-syntax-exponentiation-operator@^6.8.0:
   version "6.13.0"
@@ -598,15 +583,6 @@ babel-plugin-transform-async-to-generator@^6.22.0:
     babel-helper-remap-async-to-generator "^6.24.1"
     babel-plugin-syntax-async-functions "^6.8.0"
     babel-runtime "^6.22.0"
-
-babel-plugin-transform-class-properties@6.24.1:
-  version "6.24.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-class-properties/-/babel-plugin-transform-class-properties-6.24.1.tgz#6a79763ea61d33d36f37b611aa9def81a81b46ac"
-  dependencies:
-    babel-helper-function-name "^6.24.1"
-    babel-plugin-syntax-class-properties "^6.8.0"
-    babel-runtime "^6.22.0"
-    babel-template "^6.24.1"
 
 babel-plugin-transform-decorators-legacy@1.3.4:
   version "1.3.4"
@@ -2205,14 +2181,6 @@ eslint-plugin-react@7.3.0:
     jsx-ast-utils "^2.0.0"
     prop-types "^15.5.10"
 
-eslint-plugin-require-path-exists@1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-require-path-exists/-/eslint-plugin-require-path-exists-1.1.7.tgz#3f8aaea1601898ec111097f0c84f38026c4e2777"
-  dependencies:
-    builtin-modules "^1.1.1"
-    fs-plus "^3.0.0"
-    resolve "^1.1.7"
-
 eslint-restricted-globals@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/eslint-restricted-globals/-/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
@@ -2646,15 +2614,6 @@ fs-extra@^0.26.4:
     path-is-absolute "^1.0.0"
     rimraf "^2.2.8"
 
-fs-plus@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fs-plus/-/fs-plus-3.0.1.tgz#54c169c40e2884a66d352780d18dd31f91d3a10d"
-  dependencies:
-    async "^1.5.2"
-    mkdirp "^0.5.1"
-    rimraf "^2.5.2"
-    underscore-plus "1.x"
-
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
@@ -2852,10 +2811,6 @@ har-validator@~4.2.1:
   dependencies:
     ajv "^4.9.1"
     har-schema "^1.0.5"
-
-harmony-reflect@^1.4.6:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/harmony-reflect/-/harmony-reflect-1.5.1.tgz#b54ca617b00cc8aef559bbb17b3d85431dc7e329"
 
 has-ansi@^2.0.0:
   version "2.0.0"
@@ -3092,12 +3047,6 @@ icss-utils@^2.1.0:
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-2.1.0.tgz#83f0a0ec378bf3246178b6c2ad9136f135b1c962"
   dependencies:
     postcss "^6.0.1"
-
-identity-obj-proxy@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
-  dependencies:
-    harmony-reflect "^1.4.6"
 
 ieee754@^1.1.4:
   version "1.1.8"
@@ -3951,12 +3900,6 @@ locate-path@^2.0.0:
   dependencies:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
-
-lodash-webpack-plugin@0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/lodash-webpack-plugin/-/lodash-webpack-plugin-0.11.4.tgz#6c3ecba3d4b8d24b53940b63542715c5ed3c4ac5"
-  dependencies:
-    lodash "^4.17.4"
 
 lodash.assignin@^4.0.9:
   version "4.2.0"
@@ -5428,6 +5371,18 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+replugger-demo-plugin-bar@*:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/replugger-demo-plugin-bar/-/replugger-demo-plugin-bar-0.1.0.tgz#ffcc994a5521a137a1eda1ed69eef9a8603e42e0"
+
+replugger-demo-plugin-foo@*:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/replugger-demo-plugin-foo/-/replugger-demo-plugin-foo-0.1.0.tgz#e05075b834b910c171b9a7eb69838e714d15fb44"
+
+replugger@*:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/replugger/-/replugger-0.1.0.tgz#fe90908bb4a2cd780845ab8529ed57b6ec08e247"
+
 request@^2.72.0, request@^2.79.0, request@^2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
@@ -5493,7 +5448,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.7, resolve@^1.2.0, resolve@~1.4.0:
+resolve@^1.2.0, resolve@~1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.4.0.tgz#a75be01c53da25d934a98ebd0e4c4a7312f92a86"
   dependencies:
@@ -5518,7 +5473,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.5.2, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
@@ -6166,16 +6121,6 @@ uglifyjs-webpack-plugin@^0.4.6:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
-
-underscore-plus@1.x:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/underscore-plus/-/underscore-plus-1.6.6.tgz#65ecde1bdc441a35d89e650fd70dcf13ae439a7d"
-  dependencies:
-    underscore "~1.6.0"
-
-underscore@~1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.6.0.tgz#8b38b10cacdef63337b8b24e4ff86d45aea529a8"
 
 uniq@^1.0.1:
   version "1.0.1"

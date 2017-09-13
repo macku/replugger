@@ -6,3 +6,4 @@ env.js
 paths.js
 webpack.config.js
 yarn.lock
+yarn-error.log
