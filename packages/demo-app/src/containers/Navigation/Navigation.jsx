@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
-import { renderSlot } from 'replugger';
+import { RenderSlot } from 'replugger';
 
 import { EXTERNAL_NAVIGATION_MENU, NAVIGATION_MENU } from 'constants/slot';
 import LinkWrapper from 'components/LinkWrapper/LinkWrapper';
@@ -16,10 +16,12 @@ class Navigation extends PureComponent {
         <ul className={styles.navigationLinks}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          {renderSlot(NAVIGATION_MENU, LinkWrapper)}
+
+          <RenderSlot name={NAVIGATION_MENU} wrapper={LinkWrapper} />
 
           <hr />
-          {renderSlot(EXTERNAL_NAVIGATION_MENU, LinkWrapper)}
+
+          <RenderSlot name={EXTERNAL_NAVIGATION_MENU} wrapper={LinkWrapper} />
         </ul>
       </aside>
     );

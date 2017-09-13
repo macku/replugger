@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { renderSlot } from 'replugger';
+import { RenderSlot } from 'replugger';
 
 import { FOOTER } from 'constants/slot';
 
@@ -8,7 +8,7 @@ class Footer extends PureComponent {
   render() {
     return (
       <footer>
-        {renderSlot(FOOTER)}
+        <RenderSlot name={FOOTER} />
       </footer>
     );
   }

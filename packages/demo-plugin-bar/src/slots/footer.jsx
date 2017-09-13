@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { slot, renderTo, renderSlot } from 'replugger';
+import { slot, renderTo, RenderSlot } from 'replugger';
 
 import { MY_SLOT, FOOTER } from '../constants/slots';
 
@@ -12,7 +12,8 @@ class Slot extends PureComponent {
         <p>Copyright by <strong>replugger</strong></p>
         <div style={{ border: '2px dotted red' }}>
           <span>{'The slot named "MY_SLOT" was created by Plugin "Bar"'}</span>
-          { renderSlot(MY_SLOT) }
+
+          <RenderSlot name={MY_SLOT} />
         </div>
       </div>
     );

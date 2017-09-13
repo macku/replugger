@@ -285,7 +285,16 @@ if (ENV === 'development') {
   webpackConfig.devtool = 'source-map';
 
   webpackConfig.plugins.push(
-    new webpack.IgnorePlugin(/react-hot-loader/)
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: true
+      },
+      comments: false,
+      mangle: false,
+      beautify: false,
+      sourceMap: true
+    })
   );
 }
 
