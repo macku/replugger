@@ -1,0 +1,28 @@
+{
+  "name": "replugger",
+  "version": "0.1.0",
+  "description": "Replugger - React pluggable application made easy!",
+  "keywords": [
+    "react",
+    "replugger",
+    "plugin",
+    "plugins",
+    "pluggable",
+    "plugin-system",
+    "plugin-manager",
+    "package",
+    "package-manager",
+    "packages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macku/replugger.git"
+  },
+  "scripts": {},
+  "author": {
+    "name": "Maciej Adamczak",
+    "email": "me@maciejadamczak.net"
+  },
+  "license": "MIT",
+  "private": true
+}
