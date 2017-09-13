@@ -178,24 +178,6 @@ const webpackConfig = {
       return chunk.mapModules(m => path.relative(m.context, m.request)).join('_');
     }),
 
-    {
-      apply(compiler) {
-        compiler.plugin('compilation', (compilation) => {
-          compilation.plugin('before-module-ids', (modules) => {
-            modules.forEach((module) => {
-              if (module.id !== null) {
-                return;
-              }
-
-              /* eslint-disable no-param-reassign */
-              module.id = module.identifier();
-              /* eslint-enabled no-param-reassign */
-            });
-          });
-        });
-      }
-    },
-
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,

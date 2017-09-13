@@ -1,7 +1,8 @@
 node_modules
-.npmignore
-.eslintrc.js
 .gitignore
+.eslintrc.js
+.npmignore
+env.js
 paths.js
 webpack.config.js
 yarn.lock
