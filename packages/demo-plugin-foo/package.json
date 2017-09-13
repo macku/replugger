@@ -1,6 +1,6 @@
 {
   "name": "replugger-demo-plugin-foo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Replugger Demo Plugin Foo",
   "keywords": [
     "react",

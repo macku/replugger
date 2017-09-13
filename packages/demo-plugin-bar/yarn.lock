@@ -5132,6 +5132,10 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+replugger@*:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/replugger/-/replugger-0.2.0.tgz#cb0220ee580fb65ec5bc3ca6182a1fa756536e02"
+
 request@^2.72.0, request@^2.79.0, request@^2.81.0:
   version "2.81.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.81.0.tgz#c6928946a0e06c5f8d6f8a9333469ffda46298a0"
