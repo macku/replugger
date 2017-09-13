@@ -2,9 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const linkedModules = [
-  'replugger',
-  'replugger-demo-plugin-bar',
-  'replugger-demo-plugin-foo'
+  'replugger'
 ];
 const LINKED_MODULES = linkedModules.map(module => fs.realpathSync(`./node_modules/${module}`));
 const EXCLUDED_MODULES = linkedModules.map(module => new RegExp(`${module}/node_modules`));
