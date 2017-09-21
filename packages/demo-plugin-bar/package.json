@@ -1,6 +1,6 @@
 {
   "name": "replugger-demo-plugin-bar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Replugger Demo Plugin Bar",
   "keywords": [
     "react",
@@ -23,7 +23,9 @@
     "build": "npm run clean && webpack",
     "clean": "rm -rf dist/*",
     "lint": "eslint --ext .js --ext .jsx src",
-    "lint:fix": "eslint --ext .js --ext .jsx src --fix"
+    "lint:fix": "eslint --ext .js --ext .jsx src --fix",
+    "prepublish": "npm run lint && npm run build",
+    "postpublish": "git push origin master --tags"
   },
   "author": {
     "name": "Maciej Adamczak",

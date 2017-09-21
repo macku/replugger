@@ -1,6 +1,6 @@
 {
   "name": "replugger-app",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,9 @@
     "test:watch": "NODE_ENV=test jest --watch",
     "lint": "eslint --ext .js --ext .jsx src",
     "lint:fix": "eslint --ext .js --ext .jsx src --fix",
-    "dev:server": "webpack-dev-server"
+    "dev:server": "webpack-dev-server",
+    "prepublish": "npm run lint && npm run build",
+    "postpublish": "git push origin master --tags"
   },
   "author": "Maciej Adamczak <me@maciejadamczak.net>",
   "dependencies": {
@@ -65,6 +67,5 @@
     "url-loader": "0.5.9",
     "webpack": "3.5.6",
     "webpack-dev-server": "2.7.1"
-  },
-  "private": true
+  }
 }
