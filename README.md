@@ -19,7 +19,7 @@ The library also takes care of **additional routes** provided by the plugin. Let
 
 TBA
 
-### Roadmap
+### Road map
 
 TBA
 
