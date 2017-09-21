@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "lts/*"
+  - "8"
+
+cache:
+  directories:
+    - "node_modules"
+    - "packages/replugger-core/node_modules"
+
+before_install:
+  - cd packages/replugger-core
+  - npm prune
+
+install:
+  - npm install
+  - npm update
+
+script:
+  - npm run lint
+  - npm run build
