@@ -48,7 +48,7 @@ TBA
 
 #### Demo application with two plugins
 
-Check the [live example](https://stackblitz.com/edit/replugger-demo-app) of the demo application[(source)](https://github.com/macku/replugger/tree/master/packages/demo-app).
+Check the [live example](https://stackblitz.com/edit/replugger-demo-app) of the demo application [(source)](https://github.com/macku/replugger/tree/master/packages/demo-app).
 
 ### Source
 

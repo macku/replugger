@@ -35,7 +35,7 @@ For more information hot to use library go to the [project GitHub page](https://
 
 ### Examples
 
-Check the [live example](https://stackblitz.com/edit/replugger-demo-app) of the demo application[(source)](https://github.com/macku/replugger/tree/master/packages/demo-app).
+Check the [live example](https://stackblitz.com/edit/replugger-demo-app) of the demo application [(source)](https://github.com/macku/replugger/tree/master/packages/demo-app).
 
 For more examples the check the [project GitHub page](https://github.com/macku/replugger).
 

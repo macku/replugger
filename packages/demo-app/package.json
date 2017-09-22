@@ -1,6 +1,7 @@
 {
   "name": "replugger-app",
-  "version": "0.4.0",
+  "version": "0.4.1",
+  "description": "Replugger Demo application",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
