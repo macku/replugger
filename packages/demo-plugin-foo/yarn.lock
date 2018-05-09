@@ -5132,7 +5132,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-replugger@*:
+replugger@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/replugger/-/replugger-0.2.0.tgz#cb0220ee580fb65ec5bc3ca6182a1fa756536e02"
 
