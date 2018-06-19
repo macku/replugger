@@ -34,7 +34,7 @@
   "license": "MIT",
   "peerDependencies": {
     "classnames": "2.2.5",
-    "prop-types": "15.5.10",
+    "prop-types": "15.6.2",
     "react": "15.6.1",
     "react-router-dom": "4.2.2",
     "replugger": "*"
@@ -67,7 +67,7 @@
     "less": "2.7.2",
     "less-loader": "4.0.5",
     "peer-deps-externals-webpack-plugin": "1.0.2",
-    "prop-types": "15.5.10",
+    "prop-types": "15.6.2",
     "react": "15.6.1",
     "react-dev-utils": "4.0.1",
     "react-router-dom": "4.2.2",
