@@ -65,7 +65,7 @@
     "peer-deps-externals-webpack-plugin": "1.0.2",
     "prop-types": "15.5.10",
     "react": "15.6.1",
-    "react-dev-utils": "4.0.1",
+    "react-dev-utils": "4.2.3",
     "source-map-loader": "0.2.1",
     "style-loader": "0.18.2",
     "url-loader": "0.5.9",
