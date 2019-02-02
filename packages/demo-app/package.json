@@ -19,7 +19,7 @@
   },
   "author": "Maciej Adamczak <me@maciejadamczak.net>",
   "dependencies": {
-    "classnames": "2.2.5",
+    "classnames": "2.2.6",
     "history": "4.7.2",
     "react": "15.6.1",
     "react-dom": "15.6.1",
