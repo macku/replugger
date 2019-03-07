@@ -42,7 +42,7 @@
     "babel-preset-env": "1.6.0",
     "babel-preset-react": "6.24.1",
     "copy-webpack-plugin": "4.0.1",
-    "css-loader": "0.28.7",
+    "css-loader": "2.1.1",
     "enzyme": "2.9.1",
     "eslint": "4.6.1",
     "eslint-config-airbnb": "15.1.0",
